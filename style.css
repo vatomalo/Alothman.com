@@ -1,0 +1,94 @@
+body { margin: 0; font-family: sans-serif; }
+
+.navbar{
+  display:flex;
+  align-items:center;
+  padding: 1.2rem 2rem;
+  background: #2fb100;
+}
+
+/* Left title */
+.name{
+  color:#fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Push menu to the far right */
+.menu{
+  margin-left: auto;
+}
+
+/* Remove default ul behavior + make horizontal */
+.menu-list{
+  display:flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+/* Link styling */
+.menu-list a{
+  color:#fff;
+  text-decoration:none;
+  font-weight: 600;
+  padding: 0.3rem 0;
+  position: relative;
+}
+
+/* Underline hover */
+.menu-list a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:2px;
+  background:#fff;
+  transition: width .2s ease;
+}
+
+.menu-list a:hover::after{
+  width:100%;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;      /* crops nicely */
+  border-radius: 14px;    /* use 50% if you want a circle */
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background: #2fb100;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.button:hover {
+  background: #249000;
+  transform: translateY(-1px);
+}
