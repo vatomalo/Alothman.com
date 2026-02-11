@@ -1,16 +1,19 @@
-body { background: #000000; font-family: sans-serif; }
+body {
+  background: #000000;
+  font-family: sans-serif;
+}
 
 
-.navbar{
-  display:flex;
-  align-items:center;
+.navbar {
+  display: flex;
+  align-items: center;
   padding: 1.2rem 2rem;
   background: #00D084;
 }
 
 /* Left title */
-.name{
-  color:#fff;
+.name {
+  color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
 }
@@ -21,14 +24,19 @@ body { background: #000000; font-family: sans-serif; }
   line-height: 1.5;
 }
 
-/* Push menu to the far right */
-.menu{
+.facts {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.menu {
   margin-left: auto;
 }
 
-/* Remove default ul behavior + make horizontal */
-.menu-list{
-  display:flex;
+.menu-list {
+  display: flex;
   gap: 2.5rem;
   list-style: none;
   margin: 0;
@@ -37,28 +45,28 @@ body { background: #000000; font-family: sans-serif; }
 }
 
 /* Link styling */
-.menu-list a{
-  color:#fff;
-  text-decoration:none;
+.menu-list a {
+  color: #fff;
+  text-decoration: none;
   font-weight: 600;
   padding: 0.3rem 0;
   position: relative;
 }
 
 /* Underline hover */
-.menu-list a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0%;
-  height:2px;
-  background:#fff;
+.menu-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #fff;
   transition: width .2s ease;
 }
 
-.menu-list a:hover::after{
-  width:100%;
+.menu-list a:hover::after {
+  width: 100%;
 }
 
 .hero {
@@ -76,10 +84,10 @@ body { background: #000000; font-family: sans-serif; }
 }
 
 .profile-img {
-  width: 600px;
-  height: 600px;
-  object-fit: cover;      /* crops nicely */
-  border-radius: 14px;    /* use 50% if you want a circle */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
   display: block;
 }
 
