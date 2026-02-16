@@ -1,42 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="no">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Mohammed's Only Fans</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammed Alothman | IT · Drift · Nettverk</title>
+  <meta name="description"
+    content="IT-student med fokus på drift, nettverk og systemadministrasjon. Linux, Docker, overvåkning og feilsøking." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <header class="navbar">
-    <div class="name">Mohammed Alothman</div>
+    <div class="name">
+      <a class="brand" href="https://vatomalo.github.io/Alothman.com/" aria-label="Gå til forsiden">
+        Mohammed Alothman
+      </a>
+    </div>
 
-    <nav class="menu">
+    <nav class="menu" aria-label="Hovedmeny">
       <ul class="menu-list">
         <li><a href="https://vatomalo.github.io/Alothman.com/">Home</a></li>
-        <li><a href="https://github.com/Mohammed-Alothman1/Luis">Projects</a></li>
-        <li><a href="#">CV</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="https://github.com/Mohammed-Alothman1" target="_blank" rel="noopener">Projects</a></li>
+        <li><a href="Mohammed-CV.pdf">CV</a></li>
+        <li><a href="mailto:Mohammed02.No@hotmail.com">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="hero">
+  <main class="hero" id="home">
     <div class="hero-inner">
-      <h1 class="title"></h1>
+      <!---<h1 class="title">Mohammed Alothman</h1>-->
 
-      <img class="profile-img" src="profile.png" alt="Profile photo">
+      <figure class="profile">
+        <img class="profile-img" src="profile.png" alt="Portrett av Mohammed Alothman" />
+      </figure>
+      <h1 class="title">Drift • Nettverk • Systemadministrasjon</h1>
 
-      <p class="text-block">IT-student med hovedfokus på drift, nettverk og systemadministrasjon.
-        Jobber strukturert med stabile løsninger, sikker drift og effektiv feilsøking.</p>
-      <ul class="facts">
-        <li><strong>Drift:</strong> Linux-servere, Docker, systemvedlikehold</li>
+      <p class="text-block">
+        IT-student med hovedfokus på drift, nettverk og systemadministrasjon.<br>
+        Jobber strukturert med stabile løsninger, sikker drift og effektiv feilsøking.
+      </p>
+
+      <ul class="facts" aria-label="Kompetanseområder">
+        <li><strong>Drift:</strong> Server drift og vedlikehold, systemvedlikehold</li>
         <li><strong>Nettverk:</strong> konfigurasjon, overvåkning og feilsøking</li>
         <li><strong>Administrasjon:</strong> dokumentasjon, struktur og stabil leveranse</li>
       </ul>
 
-      <a class="button" href="https://github.com/Mohammed-Alothman1">View my work</a>
+      <div class="cta-row">
+        <a class="button primary" href="https://github.com/Mohammed-Alothman1" target="_blank" rel="noopener">
+          View my work
+        </a>
+        <a class="button ghost" href="mailto:Mohammed02.No@hotmail.com">Contact</a>
+      </div>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>
+          E-post: <a href="mailto:Mohammed02.No@hotmail.com">Mohammed02.No@hotmail.com</a><br />
+          GitHub: <a href="https://github.com/Mohammed-Alothman1" target="_blank" rel="noopener">Mohammed-Alothman1</a>
+        </p>
+      </section>
+
+      <details class="cv-toggle">
+        <summary>Show CV</summary>
+        <section id="cv" class="section">
+          <iframe src="Mohammed-CV.pdf" width="100%" height="900px" style="border:none;" title="CV"></iframe>
+        </section>
+      </details>
+
+
     </div>
   </main>
 
