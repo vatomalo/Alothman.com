@@ -11,13 +11,15 @@
 </head>
 
 <body>
+  <canvas id="matrix-bg"></canvas>
 
   <header class="navbar">
-    <div class="name">
-      <a class="brand" href="https://vatomalo.github.io/Alothman.com/" aria-label="Gå til forsiden">
-        Mohammed Alothman
-      </a>
-    </div>
+    <div class="brand-wrap">
+  <a class="brand" href="https://vatomalo.github.io/Alothman.com/" aria-label="Gå til forsiden">
+    <img src="logo.svg" alt="" class="logo">
+    <span>Mohammed Alothman</span>
+  </a>
+</div>
 
     <nav class="menu" aria-label="Hovedmeny">
       <ul class="menu-list">
@@ -68,7 +70,7 @@
         <summary>Show CV</summary>
         <section id="cv" class="section">
           <iframe src="Mohammed-CV.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="900px"
-            style="border:none;" title="CV" aria-label="CV i PDF-format" class = "cv-frame">
+            style="border:none;" title="CV" aria-label="CV i PDF-format" class="cv-frame">
           </iframe>
         </section>
       </details>
@@ -78,5 +80,6 @@
   </main>
 
 </body>
+<script src="martrix-bg.js"></script>
 
 </html>
