@@ -1,5 +1,12 @@
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: #0b0b0b;
@@ -67,14 +74,15 @@ body {
   margin: 18px 0 22px;
   border-radius: 22px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
 }
 
 .profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scaleX(-1);
   object-position: 50% 20%;
   display: block;
 }
@@ -111,7 +119,7 @@ body {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 800;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .button.primary {
@@ -133,10 +141,19 @@ body {
 .section {
   padding-top: 24px;
   margin-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .section h2 {
   margin: 0 0 10px;
   font-size: 22px;
+}
+
+.cv-frame {
+  width: 100%;
+  max-width: 900px;
+  height: 900px;
+  margin: auto;
+  display: block;
+  border: none;
 }
