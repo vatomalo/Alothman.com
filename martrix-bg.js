@@ -1,43 +1,50 @@
 const canvas = document.getElementById("matrix-bg");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 const letters = "アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const fontSize = 14;
-const columns = canvas.width / fontSize;
 
-const drops = Array(Math.floor(columns)).fill(1);
+let drops = [];
+let columns = 0;
 
-function animate() {
-    draw();
-    requestAnimationFrame(animate);
+const fps = 18;
+const interval = 1000 / fps;
+let lastTime = 0;
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  columns = Math.floor(canvas.width / fontSize);
+  drops = Array(columns).fill(1);
 }
-animate();
 
 function draw() {
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(0,0,0,0.08)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "#00ff88";
-    ctx.font = fontSize + "px monospace";
+  ctx.fillStyle = "#00ff88";
+  ctx.font = `${fontSize}px monospace`;
 
-    for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+  for (let i = 0; i < drops.length; i++) {
+    const text = letters[Math.floor(Math.random() * letters.length)];
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
-        }
-
-        drops[i]++;
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      drops[i] = 0;
     }
+    drops[i]++;
+  }
 }
 
-setInterval(draw, 55);
+function animate(time) {
+  if (time - lastTime >= interval) {
+    draw();
+    lastTime = time;
+  }
+  requestAnimationFrame(animate);
+}
 
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
+window.addEventListener("resize", resize);
+resize();
+requestAnimationFrame(animate);
